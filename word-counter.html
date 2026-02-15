@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter | Kilotools</title>
+    <style>body{font-family:sans-serif;padding:20px;text-align:center;}textarea{width:100%;max-width:500px;height:200px;padding:10px;border-radius:10px;}</style>
+</head>
+<body>
+    <h1>Word Counter</h1>
+    <textarea id="input" oninput="count()" placeholder="Paste your text here..."></textarea>
+    <div style="margin-top:10px;font-size:1.2rem;">
+        Words: <span id="w">0</span> | Characters: <span id="c">0</span>
+    </div>
+    <script>function count(){let t=document.getElementById('input').value;document.getElementById('w').innerText=t.trim().split(/\s+/).filter(x=>x).length;document.getElementById('c').innerText=t.length;}</script>
+</body>
+</html>
