@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer | Kilotools</title>
+    <style>body{font-family:sans-serif;text-align:center;padding:50px;background:#222;color:white;}#timer{font-size:5rem;margin:20px;}</style>
+</head>
+<body>
+    <h1>Focus Timer</h1>
+    <div id="timer">25:00</div>
+    <button onclick="start()" style="padding:10px 30px;font-size:1.2rem;cursor:pointer;">Start Focus</button>
+    <script>function start(){let t=1500;setInterval(()=>{if(t>0){t--;let m=Math.floor(t/60),s=t%60;document.getElementById('timer').innerText=`${m}:${s<10?'0':''}${s}`;}},1000);}</script>
+</body>
+</html>
