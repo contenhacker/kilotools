@@ -3,37 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kilotools | Professional Crypto Converters & Tech Tools</title>
+    <title>Kilotools | Professional Web Utilities & Micro-Services</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; background-color: #f8f9fa; color: #333; }
-        .header { text-align: center; padding: 40px 0; }
-        .tool-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid #1a73e8; margin-bottom: 20px; text-decoration: none; display: block; color: inherit; transition: 0.3s; }
-        .tool-card:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
-        .tool-title { font-size: 1.3rem; font-weight: bold; color: #1a73e8; margin-bottom: 5px; }
-        .badge { background: #28a745; color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase; }
-        footer { text-align: center; margin-top: 50px; color: #888; font-size: 0.9rem; }
+        :root { --primary: #1a73e8; --bg: #f8f9fa; --text: #202124; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; }
+        header { text-align: center; padding: 40px 0; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; color: var(--primary); }
+        .subtitle { font-size: 1.1rem; color: #5f6368; margin-bottom: 40px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: 0.3s; border: 1px solid #e0e0e0; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); border-color: var(--primary); }
+        .card h3 { margin-top: 0; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+        .card p { font-size: 0.9rem; color: #5f6368; line-height: 1.4; }
+        .badge { background: #e8f0fe; color: var(--primary); font-size: 0.7rem; padding: 4px 8px; border-radius: 4px; text-transform: uppercase; font-weight: bold; }
+
+        footer { text-align: center; margin-top: 60px; padding: 20px; color: #70757a; border-top: 1px solid #e0e0e0; }
     </style>
 </head>
 <body>
 
-    <div class="header">
+<div class="container">
+    <header>
         <h1>🛠️ Kilotools.com</h1>
-        <p>Your destination for high-performance web utilities.</p>
-    </div>
+        <p class="subtitle">Fast, secure, and professional tools for developers and creators.</p>
+    </header>
 
-    <a href="crypto.html" class="tool-card">
-        <div class="tool-title">Live Crypto Price Converter <span class="badge">Online</span></div>
-        <p>Instant Bitcoin, Ethereum, and Solana conversion to USD/EUR. Real-time market data.</p>
-    </a>
+    <div class="grid">
+        <a href="crypto.html" class="card">
+            <h3>💰 Crypto Converter <span class="badge">Live</span></h3>
+            <p>Real-time cryptocurrency exchange rates for BTC, ETH, SOL and more.</p>
+        </a>
 
-    <div class="tool-card" style="border-left-color: #ccc; opacity: 0.7;">
-        <div class="tool-title" style="color: #666;">Security Payload Generator</div>
-        <p>Advanced tools for security professionals and bug hunters. (Developing...)</p>
+        <a href="password.html" class="card">
+            <h3>🔐 Password Gen <span class="badge">Security</span></h3>
+            <p>Generate ultra-secure, random passwords for your accounts and APIs.</p>
+        </a>
+
+        <a href="unit-converter.html" class="card">
+            <h3>📐 PX to REM</h3>
+            <p>Convert pixels to REM units instantly for modern web development.</p>
+        </a>
+
+        <a href="markdown-editor.html" class="card">
+            <h3>📝 MD Previewer</h3>
+            <p>Live Markdown editor to visualize your GitHub README files.</p>
+        </a>
+
+        <a href="word-counter.html" class="card">
+            <h3>📊 Word Counter</h3>
+            <p>Accurate word and character count for your essays and articles.</p>
+        </a>
+
+        <a href="countdown.html" class="card">
+            <h3>⏱️ Focus Timer</h3>
+            <p>Boost your productivity with a simple 25-minute Pomodoro timer.</p>
+        </a>
+
+        <a href="json-formatter.html" class="card">
+            <h3>💻 JSON Formatter</h3>
+            <p>Clean and beautify messy JSON code for better readability.</p>
+        </a>
+
+        <a href="qr-generator.html" class="card">
+            <h3>📱 QR Generator</h3>
+            <p>Create custom QR codes for your links and business marketing.</p>
+        </a>
+
+        <a href="color-picker.html" class="card">
+            <h3>🎨 Color Picker</h3>
+            <p>Select colors and get HEX/RGB codes for your design projects.</p>
+        </a>
+
+        <a href="base64-tool.html" class="card">
+            <h3>🛡️ Base64 Tool</h3>
+            <p>Securely encode and decode text using Base64 format.</p>
+        </a>
     </div>
 
     <footer>
-        &copy; 2026 Kilotools - Built for Speed & Precision
+        &copy; 2026 Kilotools.com - Built for Performance. <br>
+        All tools run locally in your browser for maximum privacy.
     </footer>
+</div>
 
 </body>
 </html>
+
