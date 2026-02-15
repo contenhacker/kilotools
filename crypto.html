@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Converter | Kilotools</title>
+    <title>Crypto Converter Pro | Kilotools</title>
     <style>
         body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
         .container { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
@@ -16,58 +16,52 @@
     </style>
 </head>
 <body>
-
 <div class="container">
-    <h1>Crypto Converter</h1>
-    
+    <h1>Crypto Converter Pro</h1>
     <div class="input-group">
         <label>Amount</label>
         <input type="number" id="amount" value="1" oninput="convert()">
     </div>
-
     <div class="input-group">
-        <label>From</label>
+        <label>Select Cryptocurrency</label>
         <select id="fromCrypto" onchange="convert()">
             <option value="bitcoin">Bitcoin (BTC)</option>
             <option value="ethereum">Ethereum (ETH)</option>
             <option value="solana">Solana (SOL)</option>
+            <option value="ripple">Ripple (XRP)</option>
+            <option value="dogecoin">Dogecoin (DOGE)</option>
+            <option value="cardano">Cardano (ADA)</option>
+            <option value="polkadot">Polkadot (DOT)</option>
         </select>
     </div>
-
     <div class="input-group">
-        <label>To</label>
+        <label>To Currency</label>
         <select id="toCurrency" onchange="convert()">
             <option value="usd">US Dollar (USD)</option>
             <option value="eur">Euro (EUR)</option>
+            <option value="gbp">British Pound (GBP)</option>
         </select>
     </div>
-
-    <div class="result" id="output">Loading price...</div>
-
-    <footer>Powered by Kilotools - Discipline & Performance</footer>
+    <div class="result" id="output">Fetching Live Price...</div>
+    <footer>© 2026 Kilotools - Real-time Market Data</footer>
 </div>
-
 <script>
     async function convert() {
         const amount = document.getElementById('amount').value;
         const crypto = document.getElementById('fromCrypto').value;
         const currency = document.getElementById('toCurrency').value;
         const output = document.getElementById('output');
-
         try {
             const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${crypto}&vs_currencies=${currency}`);
             const data = await response.json();
             const price = data[crypto][currency];
-            const total = (amount * price).toLocaleString();
-            
+            const total = (amount * price).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
             output.innerText = `${total} ${currency.toUpperCase()}`;
         } catch (error) {
-            output.innerText = "Error fetching price";
+            output.innerText = "Connection Error";
         }
     }
-    // Initial call
     convert();
 </script>
-
 </body>
 </html>
