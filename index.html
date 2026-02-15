@@ -3,63 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kilotools | 20+ Free Online Professional Utilities</title>
+    <title>Kilotools | 40+ Professional Online Tools</title>
     <style>
-        :root { --primary: #1a73e8; --bg: #f8f9fa; --text: #202124; }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 15px; }
-        .container { max-width: 1100px; margin: auto; }
-        header { text-align: center; padding: 30px 0; border-bottom: 2px solid var(--primary); margin-bottom: 30px; }
-        h1 { font-size: 2.2rem; color: var(--primary); margin: 0; }
-        .stats { font-weight: bold; color: #d93025; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+        :root { --primary: #1a73e8; --bg: #f8f9fa; --text: #202124; --accent: #d93025; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 10px; }
+        .container { max-width: 1200px; margin: auto; }
+        header { text-align: center; padding: 25px 0; border-bottom: 3px solid var(--primary); margin-bottom: 25px; background: white; border-radius: 0 0 15px 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        h1 { font-size: 2rem; color: var(--primary); margin: 5px 0; }
+        .stats-bar { background: var(--accent); color: white; padding: 5px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; border-radius: 4px; display: inline-block; margin-bottom: 10px; }
         
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 15px; }
-        .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); text-decoration: none; color: inherit; transition: 0.2s; border: 1px solid #e0e0e0; display: flex; flex-direction: column; }
-        .card:hover { border-color: var(--primary); background: #fdfdfd; transform: scale(1.02); }
-        .card h3 { margin: 0 0 8px 0; font-size: 1.1rem; color: var(--primary); }
-        .card p { font-size: 0.85rem; color: #5f6368; margin: 0; line-height: 1.3; }
-        .tag { font-size: 0.7rem; color: #70757a; margin-top: auto; padding-top: 10px; font-weight: bold; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+        .card { background: white; padding: 12px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); text-decoration: none; color: inherit; transition: 0.2s; border: 1px solid #e0e0e0; position: relative; overflow: hidden; }
+        .card:hover { border-color: var(--primary); transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .card h3 { margin: 0 0 5px 0; font-size: 1rem; color: var(--primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .card p { font-size: 0.75rem; color: #5f6368; margin: 0; height: 32px; overflow: hidden; }
+        .tag { font-size: 0.65rem; color: #9aa0a6; margin-top: 8px; font-weight: bold; border-top: 1px solid #f1f3f4; padding-top: 5px; }
 
-        footer { text-align: center; margin-top: 50px; padding: 20px; color: #70757a; font-size: 0.8rem; }
+        footer { text-align: center; margin-top: 40px; padding: 20px; color: #70757a; font-size: 0.8rem; border-top: 1px solid #e0e0e0; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <header>
-        <div class="stats">System Status: 20 Tools Online</div>
+        <div class="stats-bar">Fleet Status: 40 Tools Deployed</div>
         <h1>🛠️ KILOTOOLS.COM</h1>
-        <p>Instant tools for developers, designers, and traders.</p>
+        <p>The fast lane for your daily digital tasks.</p>
     </header>
 
     <div class="grid">
-        <a href="crypto.html" class="card"><h3>💰 Crypto Conv.</h3><p>Real-time exchange rates.</p><div class="tag">FINANCE</div></a>
+        <a href="crypto.html" class="card"><h3>💰 Crypto Conv.</h3><p>Real-time market rates.</p><div class="tag">FINANCE</div></a>
         <a href="password.html" class="card"><h3>🔐 Password Gen</h3><p>Secure random keys.</p><div class="tag">SECURITY</div></a>
         <a href="unit-converter.html" class="card"><h3>📐 PX to REM</h3><p>CSS layout helper.</p><div class="tag">DEV</div></a>
-        <a href="markdown-editor.html" class="card"><h3>📝 MD Preview</h3><p>Live GitHub README preview.</p><div class="tag">DEV</div></a>
-        <a href="word-counter.html" class="card"><h3>📊 Word Count</h3><p>Text analytics tool.</p><div class="tag">WRITING</div></a>
+        <a href="markdown-editor.html" class="card"><h3>📝 MD Preview</h3><p>Live Markdown viewer.</p><div class="tag">DEV</div></a>
+        <a href="word-counter.html" class="card"><h3>📊 Word Count</h3><p>Text analysis tool.</p><div class="tag">WRITING</div></a>
         <a href="countdown.html" class="card"><h3>⏱️ Focus Timer</h3><p>Pomodoro productivity.</p><div class="tag">WORK</div></a>
-        <a href="json-formatter.html" class="card"><h3>💻 JSON Format</h3><p>Beautify messy code.</p><div class="tag">DEV</div></a>
-        <a href="qr-generator.html" class="card"><h3>📱 QR Gen</h3><p>Create instant QR codes.</p><div class="tag">MARKETING</div></a>
+        <a href="json-formatter.html" class="card"><h3>💻 JSON Format</h3><p>Clean & beautify code.</p><div class="tag">DEV</div></a>
+        <a href="qr-generator.html" class="card"><h3>📱 QR Gen</h3><p>Instant QR code creator.</p><div class="tag">MARKETING</div></a>
         <a href="color-picker.html" class="card"><h3>🎨 Color Picker</h3><p>HEX/RGB selector.</p><div class="tag">DESIGN</div></a>
-        <a href="base64-tool.html" class="card"><h3>🛡️ Base64</h3><p>Encode & Decode text.</p><div class="tag">SECURITY</div></a>
+        <a href="base64-tool.html" class="card"><h3>🛡️ Base64</h3><p>Secure text coding.</p><div class="tag">SECURITY</div></a>
 
-        <a href="lorem-ipsum.html" class="card"><h3>📜 Lorem Ipsum</h3><p>Placeholder text generator.</p><div class="tag">DESIGN</div></a>
-        <a href="html-entities.html" class="card"><h3>🔣 HTML Entities</h3><p>Escape special characters.</p><div class="tag">DEV</div></a>
-        <a href="percentage-calc.html" class="card"><h3>📈 % Calculator</h3><p>Quick math for business.</p><div class="tag">FINANCE</div></a>
-        <a href="line-counter.html" class="card"><h3>📏 Line Counter</h3><p>Count code/text lines.</p><div class="tag">DEV</div></a>
-        <a href="case-converter.html" class="card"><h3>🔠 Case Conv.</h3><p>Upper/Lower case toggle.</p><div class="tag">TEXT</div></a>
-        <a href="epoch-converter.html" class="card"><h3>📅 Epoch Conv.</h3><p>Unix time to readable date.</p><div class="tag">DEV</div></a>
-        <a href="random-number.html" class="card"><h3>🎲 Random Num</h3><p>Pick a random number.</p><div class="tag">UTILS</div></a>
-        <a href="image-placeholder.html" class="card"><h3>🖼️ Img Holder</h3><p>Dummy image link gen.</p><div class="tag">DEV</div></a>
-        <a href="binary-converter.html" class="card"><h3>🔢 Binary Conv.</h3><p>Text to 010101 data.</p><div class="tag">DEV</div></a>
-        <a href="list-cleaner.html" class="card"><h3>🧹 List Cleaner</h3><p>Remove list duplicates.</p><div class="tag">DATA</div></a>
+        <a href="lorem-ipsum.html" class="card"><h3>📜 Lorem Ipsum</h3><p>Placeholder text.</p><div class="tag">DESIGN</div></a>
+        <a href="html-entities.html" class="card"><h3>🔣 HTML Entities</h3><p>Escape characters.</p><div class="tag">DEV</div></a>
+        <a href="percentage-calc.html" class="card"><h3>📈 % Calculator</h3><p>Quick math tools.</p><div class="tag">FINANCE</div></a>
+        <a href="line-counter.html" class="card"><h3>📏 Line Counter</h3><p>Text line analytics.</p><div class="tag">DEV</div></a>
+        <a href="case-converter.html" class="card"><h3>🔠 Case Conv.</h3><p>Upper/Lower toggle.</p><div class="tag">TEXT</div></a>
+        <a href="epoch-converter.html" class="card"><h3>📅 Epoch Conv.</h3><p>Unix time helper.</p><div class="tag">DEV</div></a>
+        <a href="random-number.html" class="card"><h3>🎲 Random Num</h3><p>RNG Generator.</p><div class="tag">UTILS</div></a>
+        <a href="image-placeholder.html" class="card"><h3>🖼️ Img Holder</h3><p>Dummy image link.</p><div class="tag">DEV</div></a>
+        <a href="binary-converter.html" class="card"><h3>🔢 Binary Conv.</h3><p>Text to binary data.</p><div class="tag">DEV</div></a>
+        <a href="list-cleaner.html" class="card"><h3>🧹 List Cleaner</h3><p>Deduplicate lists.</p><div class="tag">DATA</div></a>
+
+        <a href="image-filters.html" class="card"><h3>📸 Image Filters</h3><p>Quick photo effects.</p><div class="tag">IMAGE</div></a>
+        <a href="image-resizer.html" class="card"><h3>📐 Image Resize</h3><p>Change dimensions.</p><div class="tag">IMAGE</div></a>
+        <a href="stopwatch.html" class="card"><h3>⏱️ Stopwatch</h3><p>Precision timing.</p><div class="tag">UTILS</div></a>
+        <a href="bmi-calculator.html" class="card"><h3>⚖️ BMI Calc</h3><p>Health body index.</p><div class="tag">HEALTH</div></a>
+        <a href="url-decoder.html" class="card"><h3>🔗 URL Decode</h3><p>Clean web links.</p><div class="tag">DEV</div></a>
+        <a href="morse-code.html" class="card"><h3>📻 Morse Code</h3><p>Text to signals.</p><div class="tag">FUN</div></a>
+        <a href="salary-calc.html" class="card"><h3>💵 Salary Calc</h3><p>Annual to Hourly.</p><div class="tag">FINANCE</div></a>
+        <a href="sort-list.html" class="card"><h3>🗂️ List Sorter</h3><p>A-Z / Z-A Sort.</p><div class="tag">DATA</div></a>
+        <a href="diff-checker.html" class="card"><h3>🔍 Diff Checker</h3><p>Compare two texts.</p><div class="tag">DEV</div></a>
+        <a href="notes.html" class="card"><h3>📒 Safe Notes</h3><p>Local auto-save.</p><div class="tag">UTILS</div></a>
+
+        <a href="lorem-pixel.html" class="card"><h3>🖼️ Random Img</h3><p>Placeholder images.</p><div class="tag">DESIGN</div></a>
+        <a href="vibration-test.html" class="card"><h3>📱 Vibrate Test</h3><p>Check phone haptics.</p><div class="tag">MOBILE</div></a>
+        <a href="password-strength.html" class="card"><h3>🛡️ Pass Strength</h3><p>Security analysis.</p><div class="tag">SECURITY</div></a>
+        <a href="screen-info.html" class="card"><h3>🖥️ Screen Specs</h3><p>Resolution & Ratio.</p><div class="tag">DEV</div></a>
+        <a href="metronome.html" class="card"><h3>🎼 Metronome</h3><p>Keep the beat.</p><div class="tag">MUSIC</div></a>
+        <a href="simple-draw.html" class="card"><h3>✏️ Quick Draw</h3><p>Sketch pad tool.</p><div class="tag">ART</div></a>
+        <a href="loan-calculator.html" class="card"><h3>🏠 Loan Calc</h3><p>Mortgage payment.</p><div class="tag">FINANCE</div></a>
+        <a href="reaction-test.html" class="card"><h3>⚡ Reaction</h3><p>Speed test game.</p><div class="tag">GAME</div></a>
+        <a href="dns-lookup-link.html" class="card"><h3>🌐 DNS Lookup</h3><p>Domain analysis.</p><div class="tag">DEV</div></a>
+        <a href="tip-calculator.html" class="card"><h3>💰 Tip Calc</h3><p>Service gratuity.</p><div class="tag">LIFE</div></a>
     </div>
 
     <footer>
-        &copy; 2026 KILOTOOLS.COM - Global Reach, Mobile Speed.
+        &copy; 2026 KILOTOOLS.COM - Global Network of Productivity Tools.
     </footer>
 </div>
 
 </body>
 </html>
-
