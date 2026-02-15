@@ -1,1 +1,5 @@
-<!DOCTYPE html><html><head><title>Metronome | Kilotools</title></head><body style="font-family:sans-serif;text-align:center;padding:20px;"><h1>Metronome</h1><input type="number" id="b" value="120"> BPM<br><br><button onclick="s()">Start/Stop</button><script>let i,r=0;function s(){if(!r){r=1;i=setInterval(()=>{new Audio('https://actions.google.com/sounds/v1/tools/wood_plank_flick.ogg').play();},60000/document.getElementById('b').value);}else{r=0;clearInterval(i);}}</script></body></html>
+<!DOCTYPE html><html><head><title>Metronome | Kilotools</title>    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head><body style="font-family:sans-serif;text-align:center;padding:20px;"><h1>Metronome</h1><input type="number" id="b" value="120"> BPM<br><br><button onclick="s()">Start/Stop</button><script>let i,r=0;function s(){if(!r){r=1;i=setInterval(()=>{new Audio('https://actions.google.com/sounds/v1/tools/wood_plank_flick.ogg').play();},60000/document.getElementById('b').value);}else{r=0;clearInterval(i);}}</script></body></html>

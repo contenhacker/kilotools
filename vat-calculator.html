@@ -1,1 +1,5 @@
-<!DOCTYPE html><html><head><title>VAT Calc (MwSt) | Kilotools</title></head><body style="font-family:sans-serif;padding:20px;"><h1>VAT Calculator</h1>Net Amount: <input type="number" id="n"><br><br><button onclick="c(19)">19% (Standard)</button> <button onclick="c(7)">7% (Reduced)</button><h2 id="o"></h2><script>function c(p){let v=document.getElementById('n').value;let vat=v*(p/100);document.getElementById('o').innerHTML=`VAT: ${vat.toFixed(2)}€<br>Total: ${(parseFloat(v)+vat).toFixed(2)}€`;}</script></body></html>
+<!DOCTYPE html><html><head><title>VAT Calc (MwSt) | Kilotools</title>    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head><body style="font-family:sans-serif;padding:20px;"><h1>VAT Calculator</h1>Net Amount: <input type="number" id="n"><br><br><button onclick="c(19)">19% (Standard)</button> <button onclick="c(7)">7% (Reduced)</button><h2 id="o"></h2><script>function c(p){let v=document.getElementById('n').value;let vat=v*(p/100);document.getElementById('o').innerHTML=`VAT: ${vat.toFixed(2)}€<br>Total: ${(parseFloat(v)+vat).toFixed(2)}€`;}</script></body></html>
