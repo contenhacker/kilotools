@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Quick QR Generator | Kilotools</title><style>body{font-family:sans-serif;text-align:center;padding:20px;}</style></head>
+<body>
+    <h1>QR Code Generator</h1>
+    <input id="t" type="text" placeholder="Enter URL or Text" style="padding:10px;width:80%;max-width:300px;"><br><br>
+    <button onclick="g()" style="padding:10px;cursor:pointer;">Generate QR</button><br><br>
+    <img id="i" src="" style="display:none;margin:0 auto;">
+    <script>function g(){let v=document.getElementById('t').value;if(v){document.getElementById('i').src=`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(v)}`;document.getElementById('i').style.display='block';}}</script>
+</body>
+</html>
