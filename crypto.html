@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Converter | Kilotools</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .container { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
+        h1 { color: #1a73e8; text-align: center; font-size: 1.5rem; }
+        .input-group { margin-bottom: 1.5rem; }
+        label { display: block; margin-bottom: 0.5rem; font-weight: bold; color: #555; }
+        input, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
+        .result { background: #e8f0fe; padding: 15px; border-radius: 6px; text-align: center; font-weight: bold; color: #1967d2; font-size: 1.2rem; }
+        footer { text-align: center; margin-top: 20px; font-size: 0.8rem; color: #888; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Crypto Converter</h1>
+    
+    <div class="input-group">
+        <label>Amount</label>
+        <input type="number" id="amount" value="1" oninput="convert()">
+    </div>
+
+    <div class="input-group">
+        <label>From</label>
+        <select id="fromCrypto" onchange="convert()">
+            <option value="bitcoin">Bitcoin (BTC)</option>
+            <option value="ethereum">Ethereum (ETH)</option>
+            <option value="solana">Solana (SOL)</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label>To</label>
+        <select id="toCurrency" onchange="convert()">
+            <option value="usd">US Dollar (USD)</option>
+            <option value="eur">Euro (EUR)</option>
+        </select>
+    </div>
+
+    <div class="result" id="output">Loading price...</div>
+
+    <footer>Powered by Kilotools - Discipline & Performance</footer>
+</div>
+
+<script>
+    async function convert() {
+        const amount = document.getElementById('amount').value;
+        const crypto = document.getElementById('fromCrypto').value;
+        const currency = document.getElementById('toCurrency').value;
+        const output = document.getElementById('output');
+
+        try {
+            const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${crypto}&vs_currencies=${currency}`);
+            const data = await response.json();
+            const price = data[crypto][currency];
+            const total = (amount * price).toLocaleString();
+            
+            output.innerText = `${total} ${currency.toUpperCase()}`;
+        } catch (error) {
+            output.innerText = "Error fetching price";
+        }
+    }
+    // Initial call
+    convert();
+</script>
+
+</body>
+</html>
