@@ -3,88 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kilotools | Professional Web Utilities & Micro-Services</title>
+    <title>Kilotools | 20+ Free Online Professional Utilities</title>
     <style>
         :root { --primary: #1a73e8; --bg: #f8f9fa; --text: #202124; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; }
-        header { text-align: center; padding: 40px 0; }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; color: var(--primary); }
-        .subtitle { font-size: 1.1rem; color: #5f6368; margin-bottom: 40px; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 15px; }
+        .container { max-width: 1100px; margin: auto; }
+        header { text-align: center; padding: 30px 0; border-bottom: 2px solid var(--primary); margin-bottom: 30px; }
+        h1 { font-size: 2.2rem; color: var(--primary); margin: 0; }
+        .stats { font-weight: bold; color: #d93025; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
         
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: 0.3s; border: 1px solid #e0e0e0; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); border-color: var(--primary); }
-        .card h3 { margin-top: 0; color: var(--primary); display: flex; align-items: center; gap: 10px; }
-        .card p { font-size: 0.9rem; color: #5f6368; line-height: 1.4; }
-        .badge { background: #e8f0fe; color: var(--primary); font-size: 0.7rem; padding: 4px 8px; border-radius: 4px; text-transform: uppercase; font-weight: bold; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 15px; }
+        .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); text-decoration: none; color: inherit; transition: 0.2s; border: 1px solid #e0e0e0; display: flex; flex-direction: column; }
+        .card:hover { border-color: var(--primary); background: #fdfdfd; transform: scale(1.02); }
+        .card h3 { margin: 0 0 8px 0; font-size: 1.1rem; color: var(--primary); }
+        .card p { font-size: 0.85rem; color: #5f6368; margin: 0; line-height: 1.3; }
+        .tag { font-size: 0.7rem; color: #70757a; margin-top: auto; padding-top: 10px; font-weight: bold; }
 
-        footer { text-align: center; margin-top: 60px; padding: 20px; color: #70757a; border-top: 1px solid #e0e0e0; }
+        footer { text-align: center; margin-top: 50px; padding: 20px; color: #70757a; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <header>
-        <h1>🛠️ Kilotools.com</h1>
-        <p class="subtitle">Fast, secure, and professional tools for developers and creators.</p>
+        <div class="stats">System Status: 20 Tools Online</div>
+        <h1>🛠️ KILOTOOLS.COM</h1>
+        <p>Instant tools for developers, designers, and traders.</p>
     </header>
 
     <div class="grid">
-        <a href="crypto.html" class="card">
-            <h3>💰 Crypto Converter <span class="badge">Live</span></h3>
-            <p>Real-time cryptocurrency exchange rates for BTC, ETH, SOL and more.</p>
-        </a>
+        <a href="crypto.html" class="card"><h3>💰 Crypto Conv.</h3><p>Real-time exchange rates.</p><div class="tag">FINANCE</div></a>
+        <a href="password.html" class="card"><h3>🔐 Password Gen</h3><p>Secure random keys.</p><div class="tag">SECURITY</div></a>
+        <a href="unit-converter.html" class="card"><h3>📐 PX to REM</h3><p>CSS layout helper.</p><div class="tag">DEV</div></a>
+        <a href="markdown-editor.html" class="card"><h3>📝 MD Preview</h3><p>Live GitHub README preview.</p><div class="tag">DEV</div></a>
+        <a href="word-counter.html" class="card"><h3>📊 Word Count</h3><p>Text analytics tool.</p><div class="tag">WRITING</div></a>
+        <a href="countdown.html" class="card"><h3>⏱️ Focus Timer</h3><p>Pomodoro productivity.</p><div class="tag">WORK</div></a>
+        <a href="json-formatter.html" class="card"><h3>💻 JSON Format</h3><p>Beautify messy code.</p><div class="tag">DEV</div></a>
+        <a href="qr-generator.html" class="card"><h3>📱 QR Gen</h3><p>Create instant QR codes.</p><div class="tag">MARKETING</div></a>
+        <a href="color-picker.html" class="card"><h3>🎨 Color Picker</h3><p>HEX/RGB selector.</p><div class="tag">DESIGN</div></a>
+        <a href="base64-tool.html" class="card"><h3>🛡️ Base64</h3><p>Encode & Decode text.</p><div class="tag">SECURITY</div></a>
 
-        <a href="password.html" class="card">
-            <h3>🔐 Password Gen <span class="badge">Security</span></h3>
-            <p>Generate ultra-secure, random passwords for your accounts and APIs.</p>
-        </a>
-
-        <a href="unit-converter.html" class="card">
-            <h3>📐 PX to REM</h3>
-            <p>Convert pixels to REM units instantly for modern web development.</p>
-        </a>
-
-        <a href="markdown-editor.html" class="card">
-            <h3>📝 MD Previewer</h3>
-            <p>Live Markdown editor to visualize your GitHub README files.</p>
-        </a>
-
-        <a href="word-counter.html" class="card">
-            <h3>📊 Word Counter</h3>
-            <p>Accurate word and character count for your essays and articles.</p>
-        </a>
-
-        <a href="countdown.html" class="card">
-            <h3>⏱️ Focus Timer</h3>
-            <p>Boost your productivity with a simple 25-minute Pomodoro timer.</p>
-        </a>
-
-        <a href="json-formatter.html" class="card">
-            <h3>💻 JSON Formatter</h3>
-            <p>Clean and beautify messy JSON code for better readability.</p>
-        </a>
-
-        <a href="qr-generator.html" class="card">
-            <h3>📱 QR Generator</h3>
-            <p>Create custom QR codes for your links and business marketing.</p>
-        </a>
-
-        <a href="color-picker.html" class="card">
-            <h3>🎨 Color Picker</h3>
-            <p>Select colors and get HEX/RGB codes for your design projects.</p>
-        </a>
-
-        <a href="base64-tool.html" class="card">
-            <h3>🛡️ Base64 Tool</h3>
-            <p>Securely encode and decode text using Base64 format.</p>
-        </a>
+        <a href="lorem-ipsum.html" class="card"><h3>📜 Lorem Ipsum</h3><p>Placeholder text generator.</p><div class="tag">DESIGN</div></a>
+        <a href="html-entities.html" class="card"><h3>🔣 HTML Entities</h3><p>Escape special characters.</p><div class="tag">DEV</div></a>
+        <a href="percentage-calc.html" class="card"><h3>📈 % Calculator</h3><p>Quick math for business.</p><div class="tag">FINANCE</div></a>
+        <a href="line-counter.html" class="card"><h3>📏 Line Counter</h3><p>Count code/text lines.</p><div class="tag">DEV</div></a>
+        <a href="case-converter.html" class="card"><h3>🔠 Case Conv.</h3><p>Upper/Lower case toggle.</p><div class="tag">TEXT</div></a>
+        <a href="epoch-converter.html" class="card"><h3>📅 Epoch Conv.</h3><p>Unix time to readable date.</p><div class="tag">DEV</div></a>
+        <a href="random-number.html" class="card"><h3>🎲 Random Num</h3><p>Pick a random number.</p><div class="tag">UTILS</div></a>
+        <a href="image-placeholder.html" class="card"><h3>🖼️ Img Holder</h3><p>Dummy image link gen.</p><div class="tag">DEV</div></a>
+        <a href="binary-converter.html" class="card"><h3>🔢 Binary Conv.</h3><p>Text to 010101 data.</p><div class="tag">DEV</div></a>
+        <a href="list-cleaner.html" class="card"><h3>🧹 List Cleaner</h3><p>Remove list duplicates.</p><div class="tag">DATA</div></a>
     </div>
 
     <footer>
-        &copy; 2026 Kilotools.com - Built for Performance. <br>
-        All tools run locally in your browser for maximum privacy.
+        &copy; 2026 KILOTOOLS.COM - Global Reach, Mobile Speed.
     </footer>
 </div>
 
