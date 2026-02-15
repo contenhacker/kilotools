@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>JSON Formatter | Kilotools</title><style>body{font-family:sans-serif;padding:20px;}textarea{width:100%;height:200px;font-family:monospace;}</style></head>
+<body>
+    <h1>JSON Formatter</h1>
+    <textarea id="j" placeholder="Paste messy JSON here..."></textarea><br>
+    <button onclick="f()" style="padding:10px;margin-top:10px;cursor:pointer;">Format JSON</button>
+    <pre id="r" style="background:#eee;padding:10px;margin-top:20px;"></pre>
+    <script>function f(){try{let obj=JSON.parse(document.getElementById('j').value);document.getElementById('r').innerText=JSON.stringify(obj,null,4);}catch(e){alert("Invalid JSON");}}</script>
+</body>
+</html>
