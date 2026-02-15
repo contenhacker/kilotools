@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Reverser - Kilotools</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; background: #f0f2f5; }
+        textarea { width: 80%; height: 100px; padding: 10px; border-radius: 8px; }
+        .output { margin-top: 20px; font-size: 1.2em; color: #d63384; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Text Reverser</h1>
+    <textarea id="input" placeholder="Type something..." oninput="reverse()"></textarea>
+    <div class="output" id="output"></div>
+    <script>
+        function reverse() {
+            let str = document.getElementById('input').value;
+            document.getElementById('output').innerText = str.split("").reverse().join("");
+        }
+    </script>
+</body>
+</html>
