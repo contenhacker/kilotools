@@ -1,1 +1,5 @@
-<!DOCTYPE html><html><head><title>Loan Calc | Kilotools</title></head><body style="font-family:sans-serif;padding:20px;"><h1>Loan Calculator</h1>Amount: <input id="a" value="10000"><br>Rate (%): <input id="r" value="5"><br>Years: <input id="y" value="5"><br><button onclick="c()">Calculate</button><h2 id="o"></h2><script>function c(){let a=document.getElementById('a').value,r=document.getElementById('r').value/1200,n=document.getElementById('y').value*12;let m=(a*r)/(1-Math.pow(1+r,-n));document.getElementById('o').innerText="Monthly: $"+m.toFixed(2);}</script></body></html>
+<!DOCTYPE html><html><head><title>Loan Calc | Kilotools</title>    <script>
+        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head><body style="font-family:sans-serif;padding:20px;"><h1>Loan Calculator</h1>Amount: <input id="a" value="10000"><br>Rate (%): <input id="r" value="5"><br>Years: <input id="y" value="5"><br><button onclick="c()">Calculate</button><h2 id="o"></h2><script>function c(){let a=document.getElementById('a').value,r=document.getElementById('r').value/1200,n=document.getElementById('y').value*12;let m=(a*r)/(1-Math.pow(1+r,-n));document.getElementById('o').innerText="Monthly: $"+m.toFixed(2);}</script></body></html>
